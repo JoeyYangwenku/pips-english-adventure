@@ -4,14 +4,14 @@
 > **A friendly story opens the door; English learning moves the story forward.**  
 > 用故事吸引孩子，在互动中听懂、拼读、表达英语。
 
-![Pip's English Adventure](assets/cover.jpg)
+**🌲 Fantasy forest · 💎 The Lost Crystal · 🐉 Pip · 🌉 Crystal Bridge**
 
 **Stage:** Interactive prototype · V5.4.2 | **Market:** Families in mainland China | **Age:** 6–8 | **Language:** English child experience + Chinese parent insights
 
 ## ▶️ Try it
 
-- **Open the interactive demo:** [index.html](index.html) — download and open in a modern desktop browser.
-- **Watch the 10-second product video:** [promo/pip_10s_intro.mp4](promo/pip_10s_intro.mp4)
+- **Explore the interactive demo source:** [index.html](index.html). The hosted version loads opening art from `assets/hero-data/`, so it should be opened from GitHub Pages after activation, not as a local `file://` page.
+- **10-second promotional video:** produced (10s MP4), binary file upload still pending; see [shot-by-shot video script](docs/PROMO_SCRIPT_10S.md).
 - **GitHub Pages:** once this repository is published and Pages is enabled for `main / root`, the anticipated URL is `https://joeyyangwenku.github.io/pips-english-adventure/` (not live until enabled).
 
 ## What makes Pip different?
@@ -24,13 +24,9 @@
 | **Parent-friendly insight** 中文家长专区 | Displays what was practiced and where review may help, without equating stars with mastery. |
 | **Safe prototype design** 适合家庭试用 | No account required; no speech recording or open-ended AI chatbot. |
 
-## Screenshots
+## Product walkthrough
 
-| Lesson activities | Live learning evidence |
-|---|---|
-| ![Overview](assets/lesson-overview.jpg) | ![Evidence](assets/learning-evidence.jpg) |
-
-![Chinese parent report](assets/parent-report.jpg)
+The interactive demo contains opening cinematic artwork, six learning activities, live right-side evidence panels, and a Chinese parent report. **Screenshots and MP4 are pending direct media upload**; see the [teaching design](docs/PRODUCT_OVERVIEW_CN.md) and [QA summary](docs/QA_V542.md) for verified scope.
 
 ## Unit 1 — The Lost Crystal
 
@@ -41,10 +37,10 @@ Six guided learning activities support early English listening, vocabulary, lett
 ## Repository structure
 
 ```text
-index.html               # Self-contained interactive prototype
-promo/pip_10s_intro.mp4  # 10-second product introduction
-assets/                  # Product screenshots and character guide
- docs/                   # Pitch, submission details, teaching notes, QA
+index.html               # GitHub Pages interactive prototype
+promo/pip_10s_intro.mp4  # Planned file; MP4 upload pending
+assets/hero-data/        # Original opening image data in 8 parts
+docs/                   # Pitch, submission details, teaching notes, QA
 ```
 
 ## Product submission
