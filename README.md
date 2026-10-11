@@ -11,6 +11,7 @@
 ## ▶️ Try it
 
 - **Explore the interactive demo source:** [index.html](index.html). The hosted version loads opening art from `assets/hero-data/`, so it should be opened from GitHub Pages after activation, not as a local `file://` page.
+- **Get a complete offline HTML:** [download.html](download.html) — when opened via GitHub Pages, this assembles the original images into a single downloadable file.
 - **10-second promotional video:** produced (10s MP4), binary file upload still pending; see [shot-by-shot video script](docs/PROMO_SCRIPT_10S.md).
 - **GitHub Pages:** once this repository is published and Pages is enabled for `main / root`, the anticipated URL is `https://joeyyangwenku.github.io/pips-english-adventure/` (not live until enabled).
 
