@@ -1,0 +1,16 @@
+产品名称：Pip's English Adventure（小龙 Pip 的英语奇遇岛）
+
+一句话介绍：面向 6–8 岁中国儿童的故事驱动式英语学习原型，通过六个循序渐进的互动任务练习听力、基础拼读和简单表达，并以动态学习记录和中文家长报告呈现学习过程。
+
+产品差异：
+1. 故事有目标：通过英语学习帮助 Pip 修复水晶桥，不是单纯的闯关游戏。
+2. 学习循序渐进：颜色听辨 → 英文指令 → 两步信息 → CVC 单词 → 简单句子 → 阅读线索。
+3. 学习过程可解释：答错、重试、通关后 Lesson Map 和 Learning Evidence 更新。
+4. 双视角设计：儿童用英文操作，家长用中文查看学习记录。
+
+项目仓库：https://github.com/JoeyYangwenku/pips-english-adventure
+试玩页面：https://joeyyangwenku.github.io/pips-english-adventure/ （仅在启用 Pages 并确认访问成功后填写）
+团队姓名/昵称：Joey Yang（按实际报名信息核对）
+报名邮箱：[请填写实际报名邮箱]
+
+产品阶段：V5.4.2 可交互原型，非正式教学效果认证。
