@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Download Pip's English Adventure — Offline Demo</title>
+<style>
+:root{color-scheme:light}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 45% -20%,#d7f3da,transparent 45%),linear-gradient(130deg,#e0eee2,#fcf3d9);color:#244638;font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;display:grid;place-items:center;padding:24px}.card{width:min(100%,590px);background:#fffdf5;border:1px solid #d9dfd2;border-radius:24px;box-shadow:0 24px 60px #213e3518;padding:36px;text-align:center}h1{font-size:clamp(25px,5vw,36px);line-height:1.2;margin:0 0 10px}.lead{font-size:18px;font-weight:700;color:#805c29}.small{color:#557263}button{background:#267744;border:0;border-radius:14px;font-weight:750;color:#fff;padding:16px 26px;cursor:pointer;font-size:17px}button:disabled{opacity:.65;cursor:wait}a{color:#17633a}#status{min-height:32px;font-size:14px;margin-top:14px}
+</style></head><body><main class="card"><h1>🐉 Pip's English Adventure</h1><p class="lead">Download the complete offline prototype</p><p>The original Crystal Bridge artwork, six learning tasks, and parent activity report will be packed into one HTML file that works without GitHub Pages.</p><button id="download">Download Offline HTML</button><p id="status" role="status" aria-live="polite"></p><p class="small">Approx. 5.5 MB · English for kids · 中文家长报告</p><p><a href="./">← Open online demo</a></p></main>
+<script>
+document.getElementById('download').addEventListener('click',async()=>{
+ const button=document.getElementById('download'),status=document.getElementById('status');button.disabled=true;status.textContent='Preparing full offline file…';
+ try{
+  const paths=Array.from({length:8},(_,i)=>'assets/hero-data/part-'+String(i+1).padStart(2,'0')+'.txt');
+  const [html,parts]=await Promise.all([fetch('index.html').then(r=>{if(!r.ok)throw Error('Missing index.html');return r.text()}),Promise.all(paths.map(p=>fetch(p).then(r=>{if(!r.ok)throw Error('Missing '+p);return r.text()})))]);
+  const art='data:image/png;base64,'+parts.map(x=>x.trim()).join('');
+  let offline=html.replace('src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="','src="'+art+'"');
+  offline=offline.replace(/<script>\s*\/\* Reconstruct the original opening artwork[\s\S]*?<\/script>\s*/,'');
+  if(!offline.includes(art)||offline.includes('loadHeroArtwork'))throw Error('Offline build validation failed');
+  const url=URL.createObjectURL(new Blob([offline],{type:'text/html;charset=utf-8'}));
+  const a=document.createElement('a');a.href=url;a.download='Pip_English_Adventure_V5.4.2_Offline.html';a.click();setTimeout(()=>URL.revokeObjectURL(url),20000);
+  status.textContent='Your complete offline HTML is ready.';
+ }catch(e){status.textContent='Could not prepare the file: '+e.message;}finally{button.disabled=false}
+});
+</script></body></html>
